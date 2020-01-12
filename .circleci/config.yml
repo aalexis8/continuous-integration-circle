@@ -1,4 +1,5 @@
 version: 2.1
+add-a-link
 executors:
   ci-executor:
     docker:
@@ -40,7 +41,8 @@ jobs:
 
       - run:
           name: run html proofer
-          command: REPLACE-ME-WITH-SCRIPT
+          command: githubtraining/ci-custom:latest
+
 
       - run:
           name: notify test is finished
@@ -55,3 +57,4 @@ workflows:
       - testlinks:
           requires:
             - build
+ master
